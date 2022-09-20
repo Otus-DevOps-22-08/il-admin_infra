@@ -3,7 +3,7 @@
 ********************
 bastion homework
 
-bastion_IP = 84.201.172.1
+bastion_IP = 84.201.172.13
 someinternalhost_IP = 10.128.0.30
 
 
