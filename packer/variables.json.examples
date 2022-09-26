@@ -1,0 +1,9 @@
+{
+  "svc-key-file_var": "/////otus/yc_cloud_service_key/key.json",
+  "folder_id_var": "//id-folder",
+  "source_image_family_var": "//ubuntu-1604-lts",
+  "install_ruby_var": "//ruby",
+  "install_mongo_var": "//mongo",
+  "install_deploy_var": "//full_deploy",
+  "subnet_id_var": "//subnet-id"
+}
