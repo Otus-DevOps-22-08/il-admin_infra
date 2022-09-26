@@ -18,12 +18,12 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "{{user `install_ruby_var`}}",
+            "script": "scripts/install_ruby.sh",
             "execute_command": "sudo {{.Path}}"
         },
         {
             "type": "shell",
-            "script": "{{user `install_mongo_var`}}",
+            "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
         }
     ]
