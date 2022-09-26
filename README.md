@@ -1,38 +1,36 @@
-# Выполнено ДЗ №4
+# Выполнено ДЗ №5
 
 # Cделано:
-Развёрнуто приложение в клауде
+# 9.1
+С помощью packer в клауде создан image
+Собрана конфигурация image-файла ubuntu16.json для запуска с отдельными provisioners ruby и mongo
+Переменные размещены в variables.json
+Запуск
 ```sh
-testapp_IP = 51.250.74.167
-testapp_port = 9292
+packer build --var-file variables.json ubuntu16.json
+```
+Из имаджа руками была запущена машина, установлена puma. Снаружи по ip:9292 доступна
+
+# 10.1
+Собирается image-файл из immutable.json. Имя reddit-full
+В образ добавлена установка и запуск сразу ruby, mongo и puma
+Скрипт установки и запуска ruby, mongo и puma
+```sh
+packer/files/deploy_all.sh
 ```
 
-# Самостоятельная работа:
-Добавлен скрипт развёртывания Ruby
+Файл с конфигурацией службы puma копируется из:
 ```sh
-install_ruby.sh
-```
-Добавлен скрипт развёртывания Mongo
-```sh
-install_mongodb.sh
-```
-Добавлен скрипт развёртывания Приложения
-```sh
-deploy.sh
+packer/files/puma.service
 ```
 
-# Дополнительное задание
-Собран скрипт - startup.sh для запуска после развёртывания инстанса
-Перед запуском нужно сменить ip в адресе подключения
-Запускается скрипт следующей командой:
+# 10.2
+Создан скрипт запуска виртуальной машины в облаке из образа reddit-full
 ```sh
-scp -i /Users/i.ryzhikov/otus/yc_ssh/appuser /Users/i.ryzhikov/otus/il-admin_infra/startup.sh yc-user@51.250.74.167:/home/yc-user/ && ssh -t yc-user@51.250.74.167 "sudo -s bash /home/yc-user/startup.sh"
+config-scripts/create-reddit-vm.sh
 ```
-Работа скрипта проверена, он успешно развёртывает приложение
+Работа скрипта проверена, приложение успешно развёрнуто
 
-
-## Как проверить работоспособность:
-Приложение доступно по адресу http:/51.250.74.167:9292
 
 ## PR checklist
  - [ ] Выставил label с номером домашнего задания
