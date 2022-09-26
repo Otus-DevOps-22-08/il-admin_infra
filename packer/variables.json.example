@@ -2,5 +2,7 @@
   "folder_id_var": "id-folder",
   "source_image_family_var": "ubuntu-1604-lts",
   "image_family": "ubuntu",
-  "subnet_id_var": "subnet-id"
+  "subnet_id_var": "subnet-id",
+  "install_ruby_var": "scripts/install_ruby.sh",
+  "install_mongo_var": "scripts/install_mongodb.sh"
 }
