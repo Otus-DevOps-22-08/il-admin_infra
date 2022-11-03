@@ -1,0 +1,9 @@
+cloud_id = "aaaaaaaaaaaa"
+folder_id = "bbbbbbbbbbbbb"
+zone = "ru-central1-a"
+image_id = "cccccccccccccc"
+public_key_path = "appuser.pub"
+subnet_id = "dddddddddddddddd"
+service_account_key_file = "key.json"
+service_acc_private_key= "appkey"
+count_num = 2
