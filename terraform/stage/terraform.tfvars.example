@@ -7,3 +7,6 @@ subnet_id = "dddddddddddddddd"
 service_account_key_file = "key.json"
 service_acc_private_key= "appkey"
 count_num = 2
+bucket_name = "eee"
+access_key  = "ffff"
+secret_key  = "ggggg"
