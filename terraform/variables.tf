@@ -28,3 +28,11 @@ variable "service_acc_private_key" {
 variable "count_num" {
   description = "How many vm deply"
 }
+variable "app_disk_image" {
+  description = "Disk image for reddit app"
+  default     = "reddit-app-base"
+}
+variable "db_disk_image" {
+  description = "Disk image for reddit db"
+  default     = "reddit-db-base"
+}
