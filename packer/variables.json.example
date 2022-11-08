@@ -1,5 +1,5 @@
 {
-  "svc-key-file_var": "key.json",
+  "svc-key-file_var": "packer/key.json",
   "folder_id_var": "id-folder",
   "source_image_family_var": "ubuntu-1604-lts",
   "image_family": "ubuntu",
