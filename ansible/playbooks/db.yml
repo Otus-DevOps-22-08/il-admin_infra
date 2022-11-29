@@ -2,6 +2,7 @@
 - name: Configure MongoDB
   hosts: db
   become: true
+  gather_facts: no
 
   roles:
     - db
